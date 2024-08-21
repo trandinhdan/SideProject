@@ -1,4 +1,4 @@
-import LoginPageUI from "../components/layout/LoginLayout/LoginPageUI";
+import LoginPageUI from "../components/layout/LoginPageLayout/LoginPageUI";
 
 const LoginPage = () => {
     return (

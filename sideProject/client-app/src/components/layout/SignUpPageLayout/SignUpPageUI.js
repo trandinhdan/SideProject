@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import userService from "../../../services/userService";
-import style from "../SignUpLayout/SignUpPageUI.module.css";
+import style from "../SignUpPageLayout/SignUpPageUI.module.css";
 
 function SignUpPageUI() {
     const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ function SignUpPageUI() {
                 // Optionally redirect or show success message
             })
             .catch(error => {
-                setError('Failed to register user: ' + error.message);
+                setError("Email already exists");
             });
     };
 

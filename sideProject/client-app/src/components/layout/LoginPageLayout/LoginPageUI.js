@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import userService from "../../../services/userService";
-import styles from "../../layout/LoginLayout/LoginPageUI.module.css";
+import styles from "./LoginPageUI.module.css";
 
 const LoginPageUI = () => {
   const [email, setEmail] = useState("");

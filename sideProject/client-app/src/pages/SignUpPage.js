@@ -1,4 +1,4 @@
-import SignUpPageUI from "../components/layout/SignUpLayout/SignUpPageUI"
+import SignUpPageUI from "../components/layout/SignUpPageLayout/SignUpPageUI"
 
 const SignUpPage = () => {
     return (
