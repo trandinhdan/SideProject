@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+const express = require("express");
+const userRoute = require("../routes/userRoute");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const app = express();
 
-export default App;
+mongoose
+    .connect(
+        "mongodb+srv://hellochaome:Trandinhdan99885515@firstdemo.szodl.mongodb.net/?retryWrites=true&w=majority&appName=firstdemo"
+    )
+    .then(() => {
+        console.log("MongoDB Connected");
+    })
+    .catch((err) => console.error("MongoDB connection error:", err));
+
+app.use(cors());
+app.use(express.json());
+app.use("/api/user", userRoute);
+app.listen(5000, () => console.log("Server running on port 5000"));
